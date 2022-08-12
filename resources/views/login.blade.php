@@ -11,40 +11,20 @@
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
     <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 
-    <title>EBA | LOGIN</title>
+    <title>{{config('app.name')}} | SIGNIN</title>
 
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Event Branding Application</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link text-uppercase" href="register.php">Register</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-uppercase" href="login.php">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-uppercase" href="Admin/adminLogin.php">Admin Login</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
+    @include('includes/nav')
 
     <main class="container my-4">
         <div class="row">
             <section class="col-md-6 offset-md-3">
 
                 <div class="card shadow p-5">
-                    <h2 class="text-center text-uppercase font-time">USER LOGIN</h2>
+                    <h2 class="text-center text-uppercase font-time">USER SIGNIN</h2>
                     <hr>
 
                     <form action="" method="POST">
@@ -87,9 +67,9 @@
                                 Disable Account</a>
                         </div>
 
-                        {{-- <div class="text-center my-2">
-                            <div class="h-captcha text-center" data-sitekey="{{ $hcaptchaSiteKey }}"></div>
-                        </div> --}}
+                        <div class="text-center my-2">
+                            <div class="h-captcha text-center" data-sitekey="{{ config('app.h_captcha_sitekey') }}"></div>
+                        </div>
 
                         <button type="submit" class="btn btn-primary rounded-pill btn-block"
                             name="login">Login</button>

@@ -9,4 +9,8 @@ class User extends Controller
     public function index(){
         return view('login');
     }
+
+    public function signup(){
+        return view('register');
+    }
 }

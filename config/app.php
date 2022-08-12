@@ -212,4 +212,13 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
+    /*
+    * Captcha Keys
+    */
+
+    'google_captcha_sitekey' => env('GOOGLE_CAPTCHA_SITE_KEY', ''),
+    'google_captcha_secretkey' => env('GOOGLE_CAPTCHA_SECRET_KEY', ''),
+    'h_captcha_sitekey' => env('H_CAPTCHA_SITE_KEY', ''),
+    'h_captcha_secretkey' => env('H_CAPTCHA_SECRET_KEY', ''),
+
 ];

@@ -1,11 +1,7 @@
-<?php
-//------------------------------>> CENTRALIZED TECHFEST NAME WITH YEAR
-require_once "config/techfestName.php";
 
-?>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#"><?php echo $techfestName ?></a>
+    <a class="navbar-brand" href="#">{{config('app.name')}}</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,11 +13,11 @@ require_once "config/techfestName.php";
         <ul class="navbar-nav mx-auto">
 
             <li>
-                <a class="nav-link text-uppercase" href="index.php">Home</a>
+                <a class="nav-link text-uppercase" href="{{ route('user-home') }}">Home</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-uppercase " href="eventPage.php">EVENTS</a>
+                <a class="nav-link text-uppercase " href="{{ route('events') }}">EVENTS</a>
             </li>
 
             <li class="nav-item dropdown text-uppercase">
@@ -36,31 +32,31 @@ require_once "config/techfestName.php";
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-uppercase " href="contactUs.php">Contact Us</a>
+                <a class="nav-link text-uppercase " href="{{ route('contactus') }}">Contact Us</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-uppercase " href="developers.php">Developers</a>
+                <a class="nav-link text-uppercase " href="{{ route('developers') }}">Developers</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-uppercase " href="sponsor.php">Sponsors</a>
+                <a class="nav-link text-uppercase " href="{{ route('sponsors') }}">Sponsors</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-uppercase " href="news.php">News & Notification</a>
+                <a class="nav-link text-uppercase " href="{{ route('news') }}">News & Notification</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-uppercase " href="feedbackForm.php">Feedback</a>
+                <a class="nav-link text-uppercase " href="{{ route('feedback') }}">Feedback</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-uppercase " href="gallery.php">Gallery</a>
+                <a class="nav-link text-uppercase " href="{{ route('gallery') }}">Gallery</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-uppercase " href="aboutPage.php">About</a>
+                <a class="nav-link text-uppercase " href="{{ route('about') }}">About</a>
             </li>
         </ul>
 
