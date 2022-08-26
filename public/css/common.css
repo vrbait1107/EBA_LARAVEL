@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
 /* font color classes */
+
+.error{
+  color: red;
+}
+
 .text-blue {
   color: blue;
 }
@@ -274,5 +279,9 @@ nav a {
 .navbar-brand {
   font-family: "Staatliches", cursive;
   font-size: 30px;
+}
+
+#message-error{
+  display: block;
 }
 /*# sourceMappingURL=common.css.map */
